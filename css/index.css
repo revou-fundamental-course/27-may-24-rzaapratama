@@ -1,7 +1,250 @@
-.logo-icon {
-  font-size: 24px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* Responsive */
+@media only screen and (max-width: 640px) {
+  nav .navbar {
+    flex-direction: column;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container2 {
+    flex-wrap: wrap;
+  }
+
+  .circle1 {
+    width: 75px !important;
+    height: 75px !important;
+  }
+
+  .circle2 {
+    width: 75px !important;
+    height: 75px !important;
+  }
+
+  .circle3 {
+    width: 75px !important;
+    height: 75px !important;
+  }
+
+  section {
+    flex-direction: column;
+  }
+
+  .textarea {
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .result-container {
+    padding-left: 0 !important;
+    padding-top: 10%;
+  }
+}
+/* Container */
+.container {
+  padding-left: 65px;
+  padding-right: 75px;
+}
+
+.container2 {
+  padding-left: 65px;
+  padding-right: 75px;
+  min-height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #efefef;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+.circle1 p {
+  padding-top: 100%;
+}
+
+.circle2 p {
+  padding-top: 100%;
+}
+
+.circle3 p {
+  padding-top: 100%;
+}
+.circle1 {
+  background: rgb(255, 255, 255);
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+.circle2 {
+  background: rgb(255, 255, 255);
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+.circle3 {
+  background: rgb(255, 255, 255);
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+.result-container {
+  padding-left: 13%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  max-width: 100vw;
+  width: 100%;
+  height: 75px;
+  background: #000000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 90%;
+  background: #000000;
+  margin: auto;
+}
+
+nav .navbar .logo a {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 660px;
+}
+nav .navbar .menu {
+  display: flex;
+}
+.navbar .menu li {
+  list-style: none;
+  margin: 0 15px;
+}
+.navbar .menu li a {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+}
+.content1 {
+  padding-top: 100px;
+}
+
+/* Slideshow */
+/* * {
+  box-sizing: border-box;
+} */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  object-fit: cover;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
   font-weight: bold;
-  color: rgb(0, 0, 0);
-  padding: 10px;
-  border: 5px;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Table */
+
+.form-table {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.input-text,
+.input-date {
+  margin-left: 0px;
+}
+
+.label {
+  display: flex;
+  width: 100px;
+}
+
+.button {
+  width: 100%;
+  margin-top: 10px;
+  align-items: center;
+}
+
+section {
+  display: flex;
+}
+
+#result {
+  width: 143%;
+  height: 250px;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }

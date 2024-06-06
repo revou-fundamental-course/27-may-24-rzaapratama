@@ -4,11 +4,183 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
-    <title>Reza's Project</title>
+    <link rel="icon" href="img/revou.jpg" />
+    <title>RevoU - Mini Project</title>
   </head>
+
   <body>
-    <nav>
-      <div class="logo-icon">Reza's Project</div>
-    </nav>
+    <div class="container">
+      <!-- Start of Header -->
+      <nav>
+        <div class="navbar">
+          <a href="#Home"><img src="img/revou.png" href="#Home" width="50px" height="50px" border-radius="100%" /></a>
+
+          <div class="logo"><a href="#Home">RevoU</a></div>
+          <ul class="menu">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Facilitation">Facilitation</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- End of Header -->
+
+      <!-- Start of Content -->
+      <div class="content1" id="Home">
+        <p>Welcome, <strong id="name">User</strong> to RevoU Website</p>
+        <br />
+        <input required type="text" placeholder="Your Name" id="name-input" />
+        <button id="send">Send</button>
+        <p id="error-name"></p>
+      </div>
+      <!-- End of Content -->
+
+      <br />
+
+      <!-- Slideshow container -->
+      <main>
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade"><img src="img/1.jpg" width="100%" height="500px" /></div>
+
+          <div class="mySlides fade"><img src="img/2.jpg" width="100%" height="500px" /></div>
+
+          <div class="mySlides fade"><img src="img/3.jpg" width="100%" height="500px" /></div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </main>
+      <br id="Facilitation" />
+      <!-- End of Slideshow container -->
+      <br />
+      <hr />
+      <br />
+      <!-- Facilities -->
+      <h1>Our Facilities</h1>
+      <br />
+      <div class="container2">
+        <div class="circle1">
+          <img src="" />
+          <p>Teacher</p>
+        </div>
+        <div class="circle2">
+          <img src="" />
+          <p>Sport Field</p>
+        </div>
+        <div class="circle3">
+          <img src="" />
+          <p>Classroom</p>
+        </div>
+      </div>
+      <br />
+      <br />
+      <hr />
+      <!-- End of Facilities -->
+
+      <!-- Start of Form -->
+      <br />
+      <h1 id="Contact">Contact Us</h1>
+      <br />
+      <section>
+        <form id="formulir" name="message-form" onsubmit="return validationForm()">
+          <table>
+            <tr class="form-table">
+              <td class="label">Nama</td>
+              <td class="label">:</td>
+              <td>
+                <input type="text" class="input-text" name="nama" id="nama" placeholder="Nama" required />
+                <span id="nameError" class="error"></span>
+              </td>
+            </tr>
+
+            <tr class="form-table">
+              <td class="label">Tanggal Lahir</td>
+              <td class="label">:</td>
+              <td>
+                <input type="date" class="input-date" name="tgl_lahir" id="tgl_lahir" required />
+                <span id="dateError" class="error"></span>
+              </td>
+            </tr>
+
+            <tr class="form-table">
+              <td class="label" id="gender">Jenis kelamin</td>
+              <td class="label">:</td>
+              <td>
+                <input type="radio" class="input-radio" id="laki-laki" name="jenis_kelamin" value="Laki-Laki" />
+                <label for="laki-laki">Laki-Laki</label>
+                <input type="radio" class="input-radio" id="perempuan" name="jenis_kelamin" value="Perempuan" />
+                <label for="perempuan">Perempuan</label>
+                <span id="genderError" class="error"></span>
+              </td>
+            </tr>
+
+            <tr class="form-table">
+              <td class="label">Pesan</td>
+              <td class="label">:</td>
+              <td>
+                <textarea name="message" class="input-text" id="message" placeholder="Ketik Pesan" rows="4" type="submit" required></textarea>
+                <span id="messageError" class="error"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button type="submit" class="button" id="submit">Submit</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+
+        <!-- Result -->
+        <section class="result-container">
+          <div class="form-result">
+            <textarea id="result" readonly></textarea>
+          </div>
+        </section>
+      </section>
+    </div>
+    <br />
+    <!-- End of Form -->
+
+    <!-- Start of Footer -->
+    <div class="footer">Made by <strong>RevoU</strong>.</div>
+    <!-- End of Footer -->
+
+    <script src="js/script.js"></script>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
   </body>
 </html>
